@@ -6,18 +6,6 @@ This project demonstrates a simple authentication system with a backend server u
 
 ## Project Structure
 
-Here's a detailed README file that explains how your project works, how to set it up, and how to run it:
-
-markdown
-
-# Authentication Project
-
-## Overview
-
-This project demonstrates a simple authentication system with a backend server using FastAPI and a frontend application using React. The backend provides authentication endpoints for login and registration, and the frontend allows users to interact with these endpoints.
-
-## Project Structure
-
 authentication_project/
 │
 ├── backend/
@@ -34,6 +22,23 @@ authentication_project/
 │ └── index.js
 ├── package.json
 └── package-lock.json
+
+### Running the Project
+
+1. Clone the repository:
+    git clone https://github.com/yourusername/your-repo-name.git
+    cd authentication_page
+
+2. Run the setup and start script:
+    ./setup_and_run.sh
+
+The bash script is written using my knowledge in CS136 and it will streamline the setting up process which includes: 
+- Setting up a virtual environment for the backend.
+- Installing dependencies for both backend and frontend.
+- Starting both the backend and frontend servers.
+
+Access the frontend application at `http://localhost:3000`. The frontend will communicate with the backend server at `http://localhost:8000`.
+
 
 # Backend
 
