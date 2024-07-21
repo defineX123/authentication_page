@@ -1,65 +1,79 @@
 import React, { useState } from 'react';
 
 const App = () => {
-   const [username, setUsername] = useState('');
-   const [password, setPassword] = useState('');
-   const [message, setMessage] = useState('');
-   const [isRegistering, setIsRegistering] = useState(false);
+    // Importwnt state variables
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const [isRegistering, setIsRegistering] = useState(false);
 
-   const handleSubmit = async (e) => {
-       e.preventDefault();
-       try {
-           const endpoint = isRegistering ? 'register' : 'login';
-           const response = await fetch(`http://localhost:8000/auth/${endpoint}`, {
-               method: 'POST',
-               headers: {
-                   'Content-Type': 'application/json',
-               },
-               body: JSON.stringify({ username, password }),
-           });
+    // Function to handle form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Prevent the default form submission behavior
 
-           const data = await response.json();
+        try {
+            // Determine the endpoint based on registration mode [register/login]
+            const endpoint = isRegistering ? 'register' : 'login';
+            const response = await fetch(`http://localhost:8000/auth/${endpoint}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', // Set the content type to JSON
+                },
+                body: JSON.stringify({ username, password }), // Send username and password
+            });
 
-           if (response.ok) {
-               if (isRegistering) {
-                   setMessage('Registration successful');
-               } else if (data.access_token) {
-                   localStorage.setItem('token', data.access_token);
-                   setMessage('Login successful');
-               }
-           } else {
-               setMessage(data.detail || 'Request failed');
-           }
-       } catch (error) {
-           console.error('Error during request:', error);
-           setMessage('An error occurred');
-       }
-   };
+            const data = await response.json();
 
-   return (
-       <div className="login-container">
-           <h1>{isRegistering ? 'Register' : 'Login'}</h1>
-           <form onSubmit={handleSubmit}>
-               <input
-                   type="text"
-                   placeholder="Username"
-                   value={username}
-                   onChange={(e) => setUsername(e.target.value)}
-               />
-               <input
-                   type="password"
-                   placeholder="Password"
-                   value={password}
-                   onChange={(e) => setPassword(e.target.value)}
-               />
-               <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
-           </form>
-           <p>{message}</p>
-           <button onClick={() => setIsRegistering(!isRegistering)}>
-               {isRegistering ? 'Back to Login' : 'Register'}
-           </button>
-       </div>
-   );
+            if (response.ok) {
+                // If registrarion is successful. Yeah!
+                if (isRegistering) {
+                    setMessage('Registration successful');
+                } else if (data.access_token) {
+                    // If login is successful and access token is received. Double Yeah!
+                    localStorage.setItem('token', data.access_token); // Store the token in localStorage
+                    setMessage('Login successful');
+                }
+            } else {
+                // Display error message
+                setMessage(data.detail || 'Request failed');
+            }
+        } catch (error) {
+            // Handle any errors that occur during the request
+            console.error('Error during request:', error);
+            setMessage('An error occurred');
+        }
+    };
+
+    return (
+        <div className="login-container">
+            {/* Display title based on registration mode */}
+            <h1>{isRegistering ? 'Register' : 'Login'}</h1>
+            <form onSubmit={handleSubmit}>
+                {/* Input field for username */}
+                <input
+                    type="text"
+                    placeholder="Username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                {/* Input field for password */}
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                {/* Submit button */}
+                <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
+            </form>
+            {/* Display message to the user */}
+            <p>{message}</p>
+            {/* Toggle between login and registration mode */}
+            <button onClick={() => setIsRegistering(!isRegistering)}>
+                {isRegistering ? 'Back to Login' : 'Register'}
+            </button>
+        </div>
+    );
 };
 
 export default App;

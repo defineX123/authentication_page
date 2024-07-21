@@ -36,3 +36,6 @@ The bash script is written using my knowledge in CS136 and it will streamline th
     src/App.js: React component that handles the login and registration forms.
     src/index.js: Entry point for the React application.
     package.json: Lists the dependencies and scripts for the frontend.
+
+# Additional Details:
+    This system used token-based authentication to avoid re-authenticate against a user every time they navigate a page.
