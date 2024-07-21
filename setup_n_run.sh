@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm backend/test.db
+
 # Set up backend
 cd backend
 python3 -m venv env
