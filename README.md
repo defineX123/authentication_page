@@ -8,9 +8,11 @@ This project demonstrates a simple authentication system with a backend server u
 
 1. Clone the repository:
     git clone https://github.com/defineX123/authentication_page
-    cd authentication_page
 
-2. Run the setup and start script:
+2. Navigate to root:
+   cd authentication_page
+
+3. Run the setup and start script:
     ./setup_and_run.sh
 
 The bash script is written using my knowledge in CS136 and it will streamline the setting up process which includes: 
@@ -18,7 +20,7 @@ The bash script is written using my knowledge in CS136 and it will streamline th
 - Installing dependencies.
 - Starting the backend server which serves static files to the frontend.
 
-3. Access the server at `http://localhost:8000`, register, and login! 
+4. Access the server at `http://localhost:8000`, register, and login! 
 
 
 # Backend
