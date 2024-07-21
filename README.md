@@ -4,30 +4,10 @@
 
 This project demonstrates a simple authentication system with a backend server using FastAPI and a frontend application using React. The backend provides authentication endpoints for (1) login and (2) registration, and the frontend allows users to interact with these endpoints.
 
-## Project Structure
-
-authentication_project/
-│
-├── backend/
-│ ├── main.py
-│ ├── auth.py
-│ ├── models.py
-│ └── requirements.txt
-│
-└── frontend/
-├── build/
-├── public/
-│ └── index.html
-├── src/
-│ ├── App.js
-│ └── index.js
-├── package.json
-└── package-lock.json
-
 ### Running the Project
 
 1. Clone the repository:
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/defineX123/authentication_page
     cd authentication_page
 
 2. Run the setup and start script:
@@ -38,7 +18,7 @@ The bash script is written using my knowledge in CS136 and it will streamline th
 - Installing dependencies.
 - Starting the backend server which serves static files to the frontend.
 
-3. Access the frontend application at `http://localhost:8000`, register, and login! 
+3. Access the server at `http://localhost:8000`, register, and login! 
 
 
 # Backend
