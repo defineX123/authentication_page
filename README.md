@@ -15,6 +15,7 @@ authentication_project/
 │ └── requirements.txt
 │
 └── frontend/
+├── build/
 ├── public/
 │ └── index.html
 ├── src/
@@ -34,10 +35,10 @@ authentication_project/
 
 The bash script is written using my knowledge in CS136 and it will streamline the setting up process which includes: 
 - Setting up a virtual environment for the backend.
-- Installing dependencies for both backend and frontend.
-- Starting both the backend and frontend servers.
+- Installing dependencies.
+- Starting the backend server which serves static files to the frontend.
 
-Access the frontend application at `http://localhost:3000`. The frontend will communicate with the backend server at `http://localhost:8000`.
+3. Access the frontend application at `http://localhost:8000`, register, and login! 
 
 
 # Backend
