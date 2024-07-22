@@ -1,11 +1,17 @@
 #!/bin/bash
 
-rm backend/test.db
+# support both Mac and Window Users
+ 
+python3 -m venv venv
+source venv/bin/activate
+
+if [ -f "backend/test.db" ]; then
+  rm backend/test.db
+fi
 
 # Set up backend
 cd backend
-python3 -m venv env
-source env/bin/activate
+
 pip install -r requirements.txt
 
 # Build frontend if not already built
@@ -18,3 +24,4 @@ fi
 # Run backend server
 cd ../backend
 uvicorn main:app --reload
+
