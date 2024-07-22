@@ -41,3 +41,12 @@ The bash script is written using my knowledge in CS136 and it will streamline th
 
 # Additional Details:
     This system used token-based authentication to avoid re-authenticate against a user every time they navigate a page.
+
+# Images
+
+![Registering august](images/first_reg.png)
+![Changing page](images/change_page.png.png)
+![Logging august](images/login_1.png.png)
+![Registering unregistered username](images/invalid_login.png.png)
+![Re-registering august](images/re_register.png.png)
+
