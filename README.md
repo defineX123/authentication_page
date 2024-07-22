@@ -50,7 +50,7 @@ Changing page
 ![Changing page](images/change_page.png)
 Logging in august
 ![Logging august](images/login_1.png)
-Logging unregistered username
+Logging in unregistered username
 ![Logging in unregistered username](images/invalid_login.png)
 Re-registering august
 ![Re-registering august](images/re_register.png)
