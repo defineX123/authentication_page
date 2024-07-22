@@ -44,9 +44,14 @@ The bash script is written using my knowledge in CS136 and it will streamline th
 
 # Images
 
+Registering august
 ![Registering august](images/first_reg.png)
+Changing page
 ![Changing page](images/change_page.png)
-![Logging august](images/login_1.png.png)
+Logging august
+![Logging august](images/login_1.png)
+Registering unregistered username
 ![Registering unregistered username](images/invalid_login.png)
+Re-registering august
 ![Re-registering august](images/re_register.png)
 
