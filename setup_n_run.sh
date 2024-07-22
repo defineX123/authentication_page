@@ -1,13 +1,7 @@
 #!/bin/bash
 
-# support both Mac and Window Users
- 
 python3 -m venv venv
 source venv/bin/activate
-
-if [ -f "backend/test.db" ]; then
-  rm backend/test.db
-fi
 
 # Set up backend
 cd backend
