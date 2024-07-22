@@ -22,7 +22,7 @@ The bash script is written using my knowledge in CS136 and it will streamline th
 - Installing dependencies.
 - Starting the backend server which serves static files to the frontend.
 
-4. Access the server at `http://localhost:8000`, register, and login! 
+4. Access the server by typing `http://localhost:8000`into the browser. Register, and login to your favorite app!
 
 
 # Backend

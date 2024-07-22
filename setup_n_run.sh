@@ -23,5 +23,5 @@ fi
 
 # Run backend server
 cd ../backend
-uvicorn main:app --reload
+uvicorn main:app
 
