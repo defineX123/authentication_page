@@ -13,9 +13,9 @@ This project demonstrates a simple authentication system with a backend server u
    cd authentication_page
 
 3. Run the setup and start script:
-    ./setup_and_run.sh (for MacOS)
-    ./setup.bat (for Windows)
-    [These can be combined using a single Python script using some conditionals]
+- ./setup_and_run.sh (for MacOS)
+- ./setup.bat (for Windows)
+- [These can be combined using a single Python script using some conditionals]
 
 The bash script is written using my knowledge in CS136 and it will streamline the setting up process which includes: 
 - Setting up a virtual environment for the backend.
